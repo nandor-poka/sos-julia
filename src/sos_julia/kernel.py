@@ -341,7 +341,7 @@ class sos_Julia:
                 False,
                 on_error='Failed to put variable {} to julia'.format(name))
 
-    def put_vars(self, items, to_kernel=None):
+    def put_vars(self, items, to_kernel=None, as_type=None):
         # first let us get all variables with names starting with sos
         try:
             response = self.sos_kernel.get_response(
